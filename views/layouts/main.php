@@ -58,7 +58,7 @@
                                         </button>
                                         <div class="dropdown-menu">
                                             <a class="dropdown-item" href="#">Done</a>
-                                            <a class="dropdown-item" href="#">Edit</a>
+                                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#addOrEditItem">Edit</a>
                                             <a class="dropdown-item" href="#" data-toggle="modal" data-target="#deleteItem">Delete</a>
                                         </div>
                                     </div>
