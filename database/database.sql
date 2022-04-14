@@ -23,6 +23,9 @@ CREATE TABLE `list` (
     CONSTRAINT `list_status_id` FOREIGN KEY (`status_id`) REFERENCES `status` (`id`)
 );
 
+INSERT INTO list (list_name, status_id)
+VALUES ('Easter Shopping List', 1);
+
 CREATE TABLE `list_item` (
     `id` int NOT NULL AUTO_INCREMENT,
     `item_name` varchar(200) NOT NULL,
@@ -36,3 +39,6 @@ CREATE TABLE `list_item` (
     CONSTRAINT `list_item_list_id` FOREIGN KEY (`list_id`) REFERENCES `list` (`id`),
     CONSTRAINT `list_item_status_id` FOREIGN KEY (`status_id`) REFERENCES `status` (`id`)
 );
+
+INSERT INTO list_item (item_name, list_id, status_id)
+VALUES ('Easter Eggs', 1, 1);
