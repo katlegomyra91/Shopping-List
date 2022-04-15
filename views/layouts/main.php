@@ -15,16 +15,6 @@
                 <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
             </div>
 
-            <?php
-            if (isset($page) && !is_null($page)) {
-                require_once($page);
-            } else {
-                ?>
-                <div class="alert alert-danger" role="alert">
-                    Page not found.
-                </div>
-            <?php } ?>
-
             <div class="card">
                 <div class="card-header">
                     <div class="row">
