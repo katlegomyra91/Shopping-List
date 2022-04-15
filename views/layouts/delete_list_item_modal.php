@@ -8,11 +8,12 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form class="text-center">
-                    <p>Are you sure you want to delete this item?</p>
+                <form class="text-center ajax_form" action="ajax-delete-list-item.php">
+                    <input type="hidden" class="form-control" name="item-id" id="deleteItemId" value="0">
+                    <p id="deleteItemQuestion">Are you sure you want to delete this item?</p>
                     <div class="form-group">
-                        <button type="button" class="btn btn-danger btn-sm">Yes</button>
-                        <button type="button" class="btn btn-success btn-sm">No</button>
+                        <button type="submit" class="btn btn-danger btn-sm">Yes</button>
+                        <button type="button" class="btn btn-success btn-sm" data-dismiss="modal" aria-label="Close">No</button>
                     </div>
                 </form>
             </div>

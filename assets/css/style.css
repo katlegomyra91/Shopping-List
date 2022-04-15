@@ -6,3 +6,17 @@ ul.shopping-list {
     padding: 0;
     list-style: none;
 }
+ul.shopping-list li {
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgba(0,0,0,.125);
+}
+ul.shopping-list li:last-child {
+    border: none;
+}
+.clickable {
+    cursor: pointer;
+}
+label.unmark-item {
+    margin-bottom: 0;
+    text-decoration: line-through;
+}

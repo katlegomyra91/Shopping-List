@@ -8,11 +8,11 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form>
-                    <input type="hidden" class="form-control" name="item-id" id="item-id" value="0">
+                <form class="ajax_form" action="ajax-add-or-edit-list-item.php">
+                    <input type="hidden" class="form-control" name="item-id" id="addOrEditItemId" value="0">
                     <div class="form-group">
                         <label for="exampleInputEmail1">Item Name</label>
-                        <input type="text" class="form-control" name="item-name" id="item-name">
+                        <input type="text" class="form-control" name="item-name" id="addOrEditItemName" placeholder="Enter Item Name">
                     </div>
                     <button type="submit" class="btn btn-primary">Save</button>
                 </form>

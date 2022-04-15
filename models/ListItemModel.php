@@ -27,9 +27,12 @@ class ListItemModel extends Model
         return parent::selectWhere(array("*"), array("id" => $id));
     }
 
-    public function addListItem(string $name): bool
+    public function addListItem(string $name, int $listId = 0): bool
     {
-        return parent::insert(array("list_name" => $name));
+        if ($listId === 0) {
+            $listId = $this->listId;
+        }
+        return parent::insert(array("item_name" => $name, "list_id" => $listId));
     }
 
     public function editListItem(string $name, int $id): bool
@@ -42,7 +45,17 @@ class ListItemModel extends Model
         return parent::update(array("status_id" => 4), array("id" => $id));
     }
 
+    public function unmarkListItem(int $id): bool
+    {
+        return parent::update(array("status_id" => 1), array("id" => $id));
+    }
+
     public function deleteListItem(int $id): bool
+    {
+        return parent::update(array("status_id" => 3), array("id" => $id));
+    }
+
+    public function realDeleteListItem(int $id): bool
     {
         return parent::delete(array("id" => $id));
     }
