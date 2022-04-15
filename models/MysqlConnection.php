@@ -1,6 +1,6 @@
 <?php
 
-require_once('models/ConnectionInterface.php');
+require_once("models/ConnectionInterface.php");
 
 class MysqlConnection implements ConnectionInterface
 {

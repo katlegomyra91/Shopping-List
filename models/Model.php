@@ -1,7 +1,7 @@
 <?php
 
-require_once('models/ModelInterface.php');
-require_once('models/MysqlConnection.php');
+require_once("models/ModelInterface.php");
+require_once("models/MysqlConnection.php");
 
 class Model implements ModelInterface
 {
