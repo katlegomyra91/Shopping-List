@@ -23,7 +23,7 @@ CREATE TABLE `list` (
     CONSTRAINT `list_status_id` FOREIGN KEY (`status_id`) REFERENCES `status` (`id`)
 );
 
-INSERT INTO list (list_name, status_id)
+INSERT INTO list (list_name)
 VALUES ('Easter Shopping List');
 
 CREATE TABLE `list_item` (
@@ -40,5 +40,5 @@ CREATE TABLE `list_item` (
     CONSTRAINT `list_item_status_id` FOREIGN KEY (`status_id`) REFERENCES `status` (`id`)
 );
 
-INSERT INTO list_item (item_name, list_id, status_id)
+INSERT INTO list_item (item_name, list_id)
 VALUES ('Easter Eggs', 1);
